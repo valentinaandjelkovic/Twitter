@@ -36,7 +36,7 @@ public class TwitterPorukaTest {
 	 * Test method for {@link com.twitter.poruke.TwitterPoruka#setKorisnik(java.lang.String)}.
 	 */
 	@Test
-	public void testSetKorisnik() {
+	public void testSetKorisnikOk() {
 		
 		tp.setKorisnik("Ivan");
 		assertEquals("Ivan", tp.getKorisnik());
@@ -58,8 +58,8 @@ public class TwitterPorukaTest {
 	 * Test method for {@link com.twitter.poruke.TwitterPoruka#setPoruka(java.lang.String)}.
 	 */
 	@Test
-	public void testSetPoruka() {
-		String p= "Sutra je dan studenata";
+	public void testSetPorukaOk() {
+		String p= "Ne znam koji je bio moj prvi tvit, ali znam da ga niko nije procitao.";
 		tp.setPoruka(p);
 		assertEquals(p, tp.getPoruka());
 				
@@ -77,8 +77,9 @@ public class TwitterPorukaTest {
 	 */
 	@Test
 	public void testToString() {
-		 String expected = "";
-	    assertEquals(expected, tp.toString());
+		tp.setKorisnik("Vucic");
+ 		tp.setPoruka("Danas je dan studenata #4april");
+ 		assertEquals("KORISNIK:" + "Vucic" + " PORUKA:" + "Danas je dan studenata #4april" , tp.toString());
 
 	}
 

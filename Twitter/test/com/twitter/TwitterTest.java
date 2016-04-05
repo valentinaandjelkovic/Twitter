@@ -12,7 +12,7 @@ import org.junit.Test;
 import com.twitter.poruke.TwitterPoruka;
 
 /**
- * @author ANA
+ * @author Valentina Andjelkovic
  *
  */
 public class TwitterTest {

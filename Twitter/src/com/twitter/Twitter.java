@@ -17,6 +17,7 @@ public class Twitter {
 	/**
 	 * Vraca listu poruke
 	 * @return poruke
+	 * 
 	 */
 	public LinkedList<TwitterPoruka> vratiSvePoruke() {
 		
@@ -24,7 +25,11 @@ public class Twitter {
 	}
 	
 	/**
-	 * Pravi novi objekat klase TwitterPoruke i dodaje na kraj liste
+	 * Kreira objekat klase TwitterPoruka i ubacuje na kraj liste 
+	 * @param korisnik
+	 * 		Username korisnika
+	 * @param poruka
+	 * 		Twitt poruka
 	 */
 	public void unesi(String korisnik, String poruka) {
 		if(korisnik==null || poruka==null || korisnik.isEmpty() || poruka.length()>140){
@@ -43,8 +48,11 @@ public class Twitter {
 	/**
 	 * Pronalazi sve poruke koje sadrze prosledjeni tag
 	 * @param maxBroj
+	 * 		Maksimalni broj poruka koji je moguce pronaci
 	 * @param tag
-	 * @return Niz 
+	 * 		Hash tag na osnovu kog se traze poruke
+	 * @return TwitterPoruka[] 
+	 * 		Niz poruka sa odgovarajucim tagom 
 	 */
 	public TwitterPoruka[] vratiPoruke(int maxBroj, String tag) {
 		if (tag == null || tag == "")

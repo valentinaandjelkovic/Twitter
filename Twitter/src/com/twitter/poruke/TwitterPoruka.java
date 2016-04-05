@@ -29,6 +29,7 @@ public class TwitterPoruka {
 	/**
 	 * Postavlja vrednost atributa korisnik
 	 * @param korisnik
+	 * 			Username korisnika
 	 * @throws java.lang.RuntimeException ukoliko je korisnik
 	 * <ul>
 	 * 		<li> null </li>
@@ -45,6 +46,7 @@ public class TwitterPoruka {
 	/**
 	 * Vraca vrednost atributa poruka
 	 * @return poruka
+	 * 		
 	 */
 	public String getPoruka() {
 		return poruka;
